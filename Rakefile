@@ -17,14 +17,13 @@ desc 'outputs hola to the terminal'
 
 desc 'migrate changes to your database' 
 namespace :db do
-  task:migrate=>:environment do
+  task:migrate => :environment do
     Student.create_table
-  end
-
   desc 'seed the database with some dummy data'
     task:seed do
     require_relative './db/seeds.rb'
   end
+end
 
 desc 'drop into the Pry console'
   task:console do
