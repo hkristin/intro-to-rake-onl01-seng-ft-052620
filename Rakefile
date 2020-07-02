@@ -6,5 +6,5 @@ namespace :greeting do
     task :hola do
        puts "hola de Rake!"
     task :environment do
-  require_relative './config/environment'
+      require_relative './config/environment'
 end
