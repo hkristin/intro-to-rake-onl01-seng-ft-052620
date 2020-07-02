@@ -14,10 +14,10 @@ desc 'outputs hola to the terminal'
   task:hola do
        puts "hola de Rake!"
   end  
- 
+
+desc 'migrate changes to your database' 
 namespace :db do
-  desc 'migrate changes to your database'
-    task:migrate do
+  task:migrate do
     Student.create_table
   end
 
