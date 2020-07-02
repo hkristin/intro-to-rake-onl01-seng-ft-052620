@@ -19,14 +19,6 @@ class Student
   desc 'migrate changes to your database'
   task :migrate => :environment do
   self.create_table
-    sql =  <<-SQL 
-      CREATE TABLE IF NOT EXISTS students (
-        id INTEGER PRIMARY KEY, 
-        name TEXT, 
-        grade TEXT
-        )
-    SQL
-    DB[:conn].execute(sql) 
   end
 end
 
