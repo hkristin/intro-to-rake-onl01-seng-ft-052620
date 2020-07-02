@@ -15,7 +15,10 @@ class Student
     @grade = grade
   end
   
-  def self.create_table
+  namespace :db do
+  desc 'migrate changes to your database'
+  task :migrate => :environment do
+  self.create_table
     sql =  <<-SQL 
       CREATE TABLE IF NOT EXISTS students (
         id INTEGER PRIMARY KEY, 
