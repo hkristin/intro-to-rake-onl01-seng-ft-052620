@@ -1,10 +1,11 @@
 require 'pry'
+
 task :environment do
   require_relative './config/environment'
 end
 
 namespace :greeting do 
-  task :hello do
+  greeting:hello do
     desc 'outputs hello to the terminal'
       puts "hello from Rake!"
     end
