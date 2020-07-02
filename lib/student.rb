@@ -15,10 +15,7 @@ class Student
     @grade = grade
   end
   
-  namespace :db do
-  desc 'migrate changes to your database'
-  task :migrate => :environment do
-  Student.create_table
+  def self.create_table
   end
 end
 
