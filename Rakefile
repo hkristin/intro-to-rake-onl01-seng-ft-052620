@@ -17,12 +17,12 @@ desc 'outputs hola to the terminal'
  
 namespace :db do
   desc 'migrate changes to your database'
-    migrate:environment do
+    task:migrate do
     Student.create_table
   end
 
   desc 'seed the database with some dummy data'
-    db:seed do
+    task:seed do
     require_relative './db/seeds.rb'
   end
 
