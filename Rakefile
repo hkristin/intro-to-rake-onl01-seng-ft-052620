@@ -27,7 +27,7 @@ namespace :db do
 end
 
 desc 'drop into the Pry console'
-  db:console => :environment do
+  task :console => :environment do
   Pry.start
 end
 end
