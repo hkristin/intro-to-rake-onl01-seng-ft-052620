@@ -30,3 +30,4 @@ desc 'drop into the Pry console'
   console:environment do
   Pry.start
 end
+end
